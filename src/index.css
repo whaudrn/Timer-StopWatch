@@ -1,12 +1,8 @@
 @charset "utf-8";
 
 .wrap {
-width: 100%;
-  max-width: 500px;
-  min-height: 100vh;
-
-  /* width: 700px; */
-  /* height: 700px; */
+  width: 700px;
+  height: 700px;
   margin: 50px auto;
   padding: 30px;
   background-color: #E6EDFF;
@@ -17,24 +13,29 @@ header button {
   padding: 10px 20px;
   font-size: 25px;
 }
+
 header button.on {
   background-color: #A2C5FF;
   border-radius: 30px;
   color: #fff;
 }
+
 header button.on:hover {
   background-color: #97BCFB;
 }
+
 header button:hover {
   background-color: #B2BED2;
   border-radius: 30px;
 }
+
 section .buttonWrap {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
 }
+
 section.stopwatch .buttonWrap {
   gap: 10px 30px;
 }
@@ -43,17 +44,21 @@ section.stopwatch .buttonWrap button {
   font-size: 18px;
 
 }
+
 section .buttonWrap .startPause {
   position: relative;
 }
+
 section .buttonWrap .startPause.pause button:nth-of-type(1),
 section .buttonWrap .startPause button:nth-of-type(2) {
   display: none;
 }
+
 section .buttonWrap .startPause button:nth-of-type(1),
 section .buttonWrap .startPause.pause button:nth-of-type(2) {
   display: block;
 }
+
 section .buttonWrap button {
   width: 300px;
   font-size: 25px;
@@ -62,6 +67,7 @@ section .buttonWrap button {
   border-radius: 30px;
   padding: 10px 30px;
 }
+
 section .buttonWrap button:hover {
   background-color: #B8D0FB;
 }
@@ -71,6 +77,7 @@ section .buttonWrap button:hover {
 section.timer .circle {
   position: relative;
 }
+
 section.timer .circle .inner {
   display: flex;
   justify-content: center;
@@ -82,6 +89,7 @@ section.timer .circle .inner {
   left: calc(50% - 283px/2);
   z-index: 1;
 }
+
 section.timer .circle p {
   display: flex;
   justify-content: center;
@@ -93,31 +101,37 @@ section.timer .circle p {
   text-decoration-thickness: 1px;
   text-underline-offset: 10px;
 }
+
 section.timer .circle {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 section.timer .circle .svg {
   transform: rotate(-90deg);
 }
+
 section.timer .circle .border {
   fill: none;
   stroke-width: 10px;
   stroke: #C7DBFC;
 }
+
 section.timer .circle .progress {
   fill: none;
   stroke-dasharray: 1256;
   stroke-dashoffset: 1256;
   stroke-width: 10px;
 }
+
 section.timer .addTimeBtn {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
+
 section.timer .addTimeBtn button {
   padding: 10px 30px;
   font-size: 20px;
@@ -129,6 +143,7 @@ section.timer .addTimeBtn button {
 section.stopwatch .circle {
   position: relative;
 }
+
 section.stopwatch .circle p {
   position: absolute;
   top: calc(50% - 66px/2);
@@ -143,29 +158,35 @@ section.stopwatch .circle {
   justify-content: center;
   align-items: center;
 }
+
 section.stopwatch .circle .border {
   fill: none;
   stroke-width: 10px;
   stroke: #C7DBFC;
 }
+
 section.stopwatch .circle .marker {
   fill: #0D57C9;
   transform-origin: center;
   transform: rotate(-90deg) translate(40%);
 }
+
 section.stopwatch .buttonWrap {
   display: flex;
   flex-wrap: wrap;
 }
+
 section.stopwatch .buttonWrap .labs {
   justify-content: center;
   display: flex;
   gap: 30px;
   width: 100%;
 }
+
 section.stopwatch .labList {
   margin-top: 5px;
 }
+
 section.stopwatch .labList ul {
   display: flex;
   flex-direction: column;
