@@ -1,21 +1,19 @@
 @charset "utf-8";
 
 .wrap {
-width: 100%;
+  width: 100%;
   max-width: 500px;
   min-height: 100vh;
-
-  /* width: 700px; */
-  /* height: 700px; */
-  margin: 50px auto;
-  padding: 30px;
+  margin: 0 auto;
+  padding: 20px;
   background-color: #E6EDFF;
+  box-sizing: border-box;
 }
 
 header button {
   width: fit-content;
-  padding: 10px 20px;
-  font-size: 25px;
+  padding: 8px 16px;
+  font-size: 20px;
 }
 header button.on {
   background-color: #A2C5FF;
@@ -33,15 +31,15 @@ section .buttonWrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
+  margin-top: 20px;
 }
 section.stopwatch .buttonWrap {
-  gap: 10px 30px;
+  gap: 10px 15px;
 }
 
 section.stopwatch .buttonWrap button {
-  font-size: 18px;
-
+  font-size: 16px;
 }
 section .buttonWrap .startPause {
   position: relative;
@@ -55,51 +53,57 @@ section .buttonWrap .startPause.pause button:nth-of-type(2) {
   display: block;
 }
 section .buttonWrap button {
-  width: 300px;
-  font-size: 25px;
+  width: 100%;
+  max-width: 250px;
+  font-size: 20px;
   color: #413232;
   background-color: #C7DBFE;
   border-radius: 30px;
-  padding: 10px 30px;
+  padding: 12px 20px;
 }
 section .buttonWrap button:hover {
   background-color: #B8D0FB;
 }
 
-
-
+/* 타이머 */
 section.timer .circle {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  width: 100%;
+  height: 300px; /* SVG가 들어갈 공간 확보 */
 }
 section.timer .circle .inner {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   position: absolute;
-  top: calc(50% - 141px/2);
-  left: calc(50% - 283px/2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
+  pointer-events: none; /* 텍스트가 SVG를 가리지 않게 함 */
 }
 section.timer .circle p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  font-size: 40px;
   width: fit-content;
   text-align: center;
   text-decoration: underline #0D57C9;
   text-decoration-thickness: 1px;
   text-underline-offset: 10px;
 }
-section.timer .circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 section.timer .circle .svg {
   transform: rotate(-90deg);
+  width: 280px;
+  height: 280px;
+  display: block;
 }
 section.timer .circle .border {
   fill: none;
@@ -119,30 +123,41 @@ section.timer .addTimeBtn {
   gap: 10px;
 }
 section.timer .addTimeBtn button {
-  padding: 10px 30px;
-  font-size: 20px;
+  padding: 8px 20px;
+  font-size: 16px;
   background-color: #C7DBFE;
   border: 1px solid #CBD2E2;
   border-radius: 40px;
 }
 
+/* 스탑워치 */
 section.stopwatch .circle {
   position: relative;
-}
-section.stopwatch .circle p {
-  position: absolute;
-  top: calc(50% - 66px/2);
-  left: calc(50% - 200px/2);
-  font-size: 50px;
-  width: fit-content;
-  text-align: center;
-}
-
-section.stopwatch .circle {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 30px 0;
+  width: 100%;
+  height: 300px; /* SVG가 들어갈 공간 확보 */
 }
+section.stopwatch .circle p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  width: fit-content;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none; /* 텍스트가 SVG를 가리지 않게 함 */
+}
+
+section.stopwatch .circle .svg {
+  width: 280px;
+  height: 280px;
+  display: block;
+}
+
 section.stopwatch .circle .border {
   fill: none;
   stroke-width: 10px;
@@ -160,17 +175,20 @@ section.stopwatch .buttonWrap {
 section.stopwatch .buttonWrap .labs {
   justify-content: center;
   display: flex;
-  gap: 30px;
+  gap: 20px;
   width: 100%;
 }
 section.stopwatch .labList {
-  margin-top: 5px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
 }
 section.stopwatch .labList ul {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: fit-content;
-  gap: 0 30px;
-  max-height: 220px;
+  gap: 5px 20px;
+  max-height: 180px;
+  font-size: 15px;
 }
